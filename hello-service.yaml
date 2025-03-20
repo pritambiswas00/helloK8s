@@ -4,8 +4,8 @@ metadata:
   name: hello-service
 spec:
   selector:
-    app: hello-k8s
+    app: hello-k8s  ## Finds PODS with this label
   ports:
-    - port: 80
-      targetPort: 3000
-  type: LoadBalancer
+    - port: 80   ## PORT the Service Listens On
+      targetPort: 3000    ## PORT on the Pod to forward to 
+  type: LoadBalancer    ## Make the service accessible from outside the cluster
