@@ -28,8 +28,10 @@ spec:
             - name: MESSAGE
               valueFrom:
                 configMapKeyRef:
+                  name: hello-config
                   key: MESSAGE
-            - name: <SOME_API_KEY>
+            - name: API_KEY
               valueFrom:
                 configMapKeyRef:
-                  key: <SOME_API_KEY>
+                  name: hello-secret
+                  key: API_KEY

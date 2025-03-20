@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: hello-config
 data:
-  MESSAGE: "TEST INFORMATION IS COMING FROM CONFIG MAP"
+  MESSAGE: "MESSAGE"
