@@ -19,3 +19,8 @@ kubectl port-forward <name of the pod> <incoming-port>:<foward-port>
 ######
 Deployments manage copies or replicas of the pods and they are always running
 ######
+
+######
+kubectl get pods-w shows how many pods are running 
+######
+
