@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-k8s
+  template:
+    metadata:
+      labels:
+        app: hello-k8s
+    spec:
+      containers:
+        - name: hello-container
+          image: hello-k8s:v1
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:   # Minimum guaranteed resources
+              cpu: "250m"   # 250 millicores (0.25 CPU)
+              memory: "128Mi"  # 128MB RAM
+            limits:     # Maximum allowed resources
+              cpu: "500m"   # 500 millicores (0.5 CPU)
+              memory: "256Mi"  # 256MB RAM
