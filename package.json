@@ -1,0 +1,16 @@
+{
+  "name": "helloK8s",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "scripts": {
+    "start": "node app/app.js",
+    "dev": "nodemon app/app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
